@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Valentine ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{
+  background:linear-gradient(135deg,#ff5f9e,#ff85c1,#ffc371);
+  color:#fff;
+  text-align:center;
+  overflow:hidden;
+}
+
+.slide{
+  display:none;
+  height:100vh;
+  padding:25px;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  animation:fade .8s;
+}
+.active{display:flex}
+
+h1{
+  font-family:'Great Vibes',cursive;
+  font-size:3rem;
+  margin-bottom:15px;
+}
+p{font-size:1.1rem;max-width:90%}
+
+img{
+  width:230px;
+  height:230px;
+  border-radius:20px;
+  object-fit:cover;
+  margin:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+button{
+  padding:12px 28px;
+  border:none;
+  border-radius:30px;
+  font-size:1rem;
+  margin:10px;
+  cursor:pointer;
+}
+
+.yes{background:#ff3366;color:white}
+.no{
+  background:white;
+  color:#ff3366;
+  position:absolute;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:scale(.9)}
+  to{opacity:1;transform:scale(1)}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" src="music.mpeg" loop></audio>
+
+<!-- INTRO -->
+<div class="slide active">
+  <h1>Welcome My Love ❤️</h1>
+
+  <p>Ek chhoti si Koshish hai… sirf tumhare liye meri jaan💕</p>
+
+  <p> click karo… kuch special aane wala hai ✨</p>
+  <button class="yes" onclick="showNext()">Click Me 💕</button>
+</div>
+
+
+
+<div class="slide">
+  <p>Aaj ka din sirf love ke liye hai, aur main ise tumhare bina imagine bhi nahi kar sakta.<br>
+Tum meri life ki woh khusiya ho, jise words me baya karna mushkil hai.<br>
+
+Tumhari smile mere din ko roshan kar deti hai,
+Tumhari baatein mere dil ko sukoon deti hain,<br>
+Aur tumhara saath meri zindagi ka sabse khoobsurat hissa hai.
+
+Main chahta hoon ki har Valentine’s Day hum dono ke liye utna hi special aur memorable ho,
+Jitna tum mere liye ho.<br>
+
+Tum meri zindagi ka sabse anmol hissa ho,
+Aur main hamesha tumhare pyar me khud ko kho karke jeena chahta hoon.<br><br>
+
+                 Happy Valentine’s Day ❤️<br>
+Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
+  <button class="yes" onclick="showNext()">Pls click me💕</button>
+</div>
+
+<!-- VALENTINE QUESTION -->
+<div class="slide">
+  <h1>Will you be my Valentine? 💝</h1>
+  <button class="yes" onclick="specialNext()">YES ❤️</button>
+  <button class="no" onmouseover="run(this)">NO 🙈</button>
+</div>
+
+<div class="slide">
+  <p>YAY!Thank you for saying yes 😘 ❤️</p><br>
+  <p>Tumne mera Valentine ban kar meri duniya hi khushiyon se bhar di ❤️</p>
+  <p>Tumhare saath har pal celebrate karna ab meri priority hai 😘</p><br>
+  <p>To kya aap ready hai apne surprise ke liye?😄</p><br>
+  <button class="yes" onclick="showNext()">YES</button>
+  <button class="no" onmouseover="run(this)">NO</button>
+</div>
+
+<!-- DAYS -->
+<div class="slide day">
+  <h1>Rose Day 🌹</h1>
+  <img src="rose.webp">
+  <p>Beautifull Rose for my beatufil girl ❤️<br>
+    Just like this rose, may our love bloom forever.<br>
+    Happy Rose Day BABY❤️<br>
+  </p><br>
+  <p>Kya tum Next day ke liye ready ho?</p>
+  <button class="yes" onclick="dayNext()">YES</button>
+  <button class="no" onmouseover="run(this)">NO</button>
+</div>
+
+<div class="slide day">
+  <h1>Propose Day 💍</h1>
+  <img src="propose.jpeg">
+  <p>“Tum meri zindagi ka woh hissa ho jiske bina sab adhura lagta hai.</p>
+
+  <p> Kya tum meri zindagi ka hamesha ka saath banogi? ❤️” 💕</p>
+  
+  <button class="yes" onclick="showNext()">YES</button>
+  <button class="no" onmouseover="run(this)">NO</button>
+</div>
+
+
+<div class="slide">
+  <p>“Yay!Thank you for saying yes! 💕</p><br>
+<p> tumhare saath har pal jeene ka mauka dene ke liye shukriya.</p>
+<p>Ab se humari journey ek saath shuru hoti hai ❤️”🥰😘❤️</p><br>
+
+<p>Kya tum Next day ke liye ready ho?</p><br>
+  <button class="yes" onclick="dayNext()">YES</button>
+  <button class="no" onmouseover="run(this)">NO</button>
+</div>
+
+<div class="slide day">
+  <h1>Chocolate Day 🍫</h1>
+  <img src="chocolate.webp">
+  <p>chocolates are sweet 🍫😘<br>
+    But nothing is sweeter than you ❤️<br>
+    Happy Chocolate Day Buggu😄🍫”
+
+  </p><br>
+  <p>kya tum Next day ke liye excited ho😄?</p><br>
+  <button class="yes" onclick="dayNext()">YES</button>
+  <button class="no" onmouseover="run(this)">NO</button>
+</div>
+
+<div class="slide day">
+  <h1>Teddy Day 🧸</h1>
+  <img src="teddy.jpg">
+  <p>"Teddy bears ke pass dil nahi hota, <br>
+    par mere paas jo teddy hai uska dil bahut bada hai<br>
+    aur wo tum ho , Tumhari smile ek teddy bear jaisi soft aur sukoon dene wali hai. 
+    Hamesha aise hi muskurate rehna.<br>
+    Happy Teddy Day meri cuttie teddy 😘🧸 ❤️</p><br>
+  <p>Next day?</p>
+  <button class="yes" onclick="dayNext()">YES</button>
+  <button class="no" onmouseover="run(this)">NO</button>
+</div>
+
+<div class="slide day">
+  <h1>Promise Day 🤝</h1>
+  <img src="promise.jpeg">
+  <p>Main tumhe ye promise nahi karta ki main saari mushkilein khatam kar dunga,<br>
+     par ye promise zaroor karta hoon ki un mushkilon mein tum kabhi akeli nahi hogi.<br>
+     Vaada hai ki tumhari muskurahat ki wajah main banunga, aansuon ki nahi.<br>
+    Happy Promise Day, my jaan💖</p><br>
+  <p>Next day?</p>
+  <button class="yes" onclick="dayNext()">YES</button>
+  <button class="no" onmouseover="run(this)">NO</button>
+</div>
+
+<div class="slide day">
+  <h1>Kiss Day 💋</h1>
+  <img src="kiss.webp">
+  <p>Ek kiss tumhare liye, taaki tumhe pata chale ki tum mere liye kitni special ho.<br>
+    Bas ek kiss hi kaafi hai ye batane ke liye ki mera dil sirf tumhare liye dhadakta hai<br>
+    Labon se labon ka milna toh sirf ek bahaana hai, asli maqsad toh tere dil mein utar jaana hai😘<br>
+  Happy kiss day meri rasmlai💋💋</p><br>
+
+  <p>Ready ho meri jaan? Kyunki aage sirf tum ho… aur main ❤️</p><br>
+  <button class="yes" onclick="dayNext()">YES</button>
+  <button class="no" onmouseover="run(this)">NO</button>
+</div>
+
+<!-- FINAL -->
+<<div class="slide" style="max-width: 600px; margin: 20px auto; text-align: center;">
+
+  <h1>Happy Valentine’s Day ❤️</h1>
+
+  <!-- Images in one line -->
+  <div style="display: flex; justify-content: center; gap: 10px;">
+    <img src="valentine1.jpeg" alt="Valentine 1" style="height: 200px; object-fit: contain;">
+    <img src="valentine2.jpeg" alt="Valentine 2" style="height: 200px; object-fit: contain;">
+  </div>
+
+  <p>
+    Thank you for being my Valentine 💕<br>
+    You are my today, my tomorrow & my forever 💑<br>
+                        ❤️
+  </p>
+
+</div>
+
+
+<script>
+let slides=document.querySelectorAll('.slide');
+let index=0;
+let music=document.getElementById("music");
+
+function showNext(){
+  if(music.paused) music.play();
+  slides[index].classList.remove('active');
+  index++;
+  slides[index].classList.add('active');
+}
+
+function specialNext(){
+  showNext();
+}
+
+function dayNext(){
+  showNext();
+}
+
+function run(btn){
+  btn.style.left=Math.random()*70+"%";
+  btn.style.top=Math.random()*70+"%";
+}
+</script>
+
+</body>
+</html>
