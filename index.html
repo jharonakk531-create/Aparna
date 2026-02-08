@@ -63,24 +63,35 @@ button{
   from{opacity:0;transform:scale(.9)}
   to{opacity:1;transform:scale(1)}
 }
+
+/* ❤️ HEART FALLING ANIMATION (ONLY ADDITION) */
+.heart{
+  position:fixed;
+  top:-10px;
+  font-size:20px;
+  animation:fall linear infinite;
+  pointer-events:none;
+  z-index:0;
+}
+
+@keyframes fall{
+  0%{transform:translateY(0) rotate(0deg);opacity:1}
+  100%{transform:translateY(100vh) rotate(360deg);opacity:0}
+}
 </style>
 </head>
 
 <body>
 
-<audio id="music" src="music.mpeg" loop></audio>
+<audio id="music" src="music1.mpeg" loop></audio>
 
 <!-- INTRO -->
 <div class="slide active">
   <h1>Welcome My Love ❤️</h1>
-
   <p>Ek chhoti si Koshish hai… sirf tumhare liye meri jaan💕</p>
-
   <p> click karo… kuch special aane wala hai ✨</p>
   <button class="yes" onclick="showNext()">Click Me 💕</button>
 </div>
-
-
 
 <div class="slide">
   <p>Aaj ka din sirf love ke liye hai, aur main ise tumhare bina imagine bhi nahi kar sakta.<br>
@@ -96,12 +107,11 @@ Jitna tum mere liye ho.<br>
 Tum meri zindagi ka sabse anmol hissa ho,
 Aur main hamesha tumhare pyar me khud ko kho karke jeena chahta hoon.<br><br>
 
-                 Happy Valentine’s Day ❤️<br>
+Happy Valentine’s Day ❤️<br>
 Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
   <button class="yes" onclick="showNext()">Pls click me💕</button>
 </div>
 
-<!-- VALENTINE QUESTION -->
 <div class="slide">
   <h1>Will you be my Valentine? 💝</h1>
   <button class="yes" onclick="specialNext()">YES ❤️</button>
@@ -109,6 +119,14 @@ Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
 </div>
 
 <div class="slide">
+   <video src="dance.mp4"
+       autoplay
+       loop
+       muted
+       playsinline
+       style="width:180px;margin-bottom:15px;border-radius:12px;">
+</video>
+
   <p>YAY!Thank you for saying yes 😘 ❤️</p><br>
   <p>Tumne mera Valentine ban kar meri duniya hi khushiyon se bhar di ❤️</p>
   <p>Tumhare saath har pal celebrate karna ab meri priority hai 😘</p><br>
@@ -134,15 +152,19 @@ Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
   <h1>Propose Day 💍</h1>
   <img src="propose.jpeg">
   <p>“Tum meri zindagi ka woh hissa ho jiske bina sab adhura lagta hai.</p>
-
   <p> Kya tum meri zindagi ka hamesha ka saath banogi? ❤️” 💕</p>
-  
   <button class="yes" onclick="showNext()">YES</button>
   <button class="no" onmouseover="run(this)">NO</button>
 </div>
 
-
 <div class="slide">
+  <video src="dance1.mp4"
+       autoplay
+       loop
+       muted
+       playsinline
+       style="width:180px;margin-bottom:15px;border-radius:12px;">
+</video>
   <p>“Yay!Thank you for saying yes! 💕</p><br>
 <p> tumhare saath har pal jeene ka mauka dene ke liye shukriya.</p>
 <p>Ab se humari journey ek saath shuru hoti hai ❤️”🥰😘❤️</p><br>
@@ -158,7 +180,6 @@ Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
   <p>chocolates are sweet 🍫😘<br>
     But nothing is sweeter than you ❤️<br>
     Happy Chocolate Day Buggu😄🍫”
-
   </p><br>
   <p>kya tum Next day ke liye excited ho😄?</p><br>
   <button class="yes" onclick="dayNext()">YES</button>
@@ -193,35 +214,42 @@ Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
 <div class="slide day">
   <h1>Kiss Day 💋</h1>
   <img src="kiss.webp">
-  <p>Ek kiss tumhare liye, taaki tumhe pata chale ki tum mere liye kitni special ho.<br>
+  <p>Ek kiss tumhare liye, taakki tumhe pata chale ki tum mere liye kitni special ho.<br>
     Bas ek kiss hi kaafi hai ye batane ke liye ki mera dil sirf tumhare liye dhadakta hai<br>
     Labon se labon ka milna toh sirf ek bahaana hai, asli maqsad toh tere dil mein utar jaana hai😘<br>
   Happy kiss day meri rasmlai💋💋</p><br>
+
+  <p>Next day?</p><br>
+  <button class="yes" onclick="dayNext()">YES</button>
+  <button class="no" onmouseover="run(this)">NO</button>
+</div>
+
+<div class="slide day">
+  <h1>Hug Day 🫂</h1>
+  <img src="hug.jpeg">
+  <p>Tumhari ek hug meri saari thakaan, saare gile-shikwe mita deti hai <br>
+    Iss duniya me sabse safe jagah tumhari baahon ka ehsaas hai 🫂❤️
+Bas yun hi pakad ke rakhna… hamesha. <br>
+Happy Hug Day, meri sukoon.”🤗🤗</p><br>
 
   <p>Ready ho meri jaan? Kyunki aage sirf tum ho… aur main ❤️</p><br>
   <button class="yes" onclick="dayNext()">YES</button>
   <button class="no" onmouseover="run(this)">NO</button>
 </div>
 
+
 <!-- FINAL -->
-<<div class="slide" style="max-width: 600px; margin: 20px auto; text-align: center;">
-
+<div class="slide" style="max-width:600px;margin:20px auto;text-align:center;">
   <h1>Happy Valentine’s Day ❤️</h1>
-
-  <!-- Images in one line -->
-  <div style="display: flex; justify-content: center; gap: 10px;">
-    <img src="valentine1.jpeg" alt="Valentine 1" style="height: 200px; object-fit: contain;">
-    <img src="valentine2.jpeg" alt="Valentine 2" style="height: 200px; object-fit: contain;">
+  <div style="display:flex;justify-content:center;gap:10px;">
+    <img src="valentine1.jpeg" style="height:200px;object-fit:contain;">
+    <img src="valentine2.jpeg" style="height:200px;object-fit:contain;">
   </div>
-
   <p>
     Thank you for being my Valentine 💕<br>
-    You are my today, my tomorrow & my forever 💑<br>
-                        ❤️
+    You are my today, my tomorrow & my forever 💑<br>❤️
   </p>
-
 </div>
-
 
 <script>
 let slides=document.querySelectorAll('.slide');
@@ -234,19 +262,35 @@ function showNext(){
   index++;
   slides[index].classList.add('active');
 }
-
-function specialNext(){
-  showNext();
-}
-
-function dayNext(){
-  showNext();
-}
-
+function specialNext(){showNext();}
+function dayNext(){showNext();}
 function run(btn){
   btn.style.left=Math.random()*70+"%";
   btn.style.top=Math.random()*70+"%";
 }
+
+/* ❤️ HEART FALLING JS (MULTIPLE EMOJIS) */
+const hearts = ["🤍","💖","💛"];
+
+function createHeart(){
+  const h = document.createElement("div");
+  h.className = "heart";
+
+  // random emoji select hoga
+  h.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+
+  h.style.left = Math.random() * 100 + "vw";
+  h.style.animationDuration = 3 + Math.random() * 5 + "s";
+  h.style.fontSize = 14 + Math.random() * 20 + "px";
+
+  document.body.appendChild(h);
+
+  setTimeout(() => h.remove(), 8000);
+}
+
+setInterval(createHeart, 300);
+
+
 </script>
 
 </body>
