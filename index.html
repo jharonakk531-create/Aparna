@@ -31,8 +31,18 @@ h1{
   font-family:'Great Vibes',cursive;
   font-size:3rem;
   margin-bottom:15px;
+  color:#e70b1d;
+  text-shadow:0 4px 10px rgba(255,51,102,0.6);
 }
-p{font-size:1.1rem;max-width:90%}
+
+p{
+  font-size:1.1rem;
+  max-width:90%;
+  color:hsl(0, 100%, 2%);
+  line-height:1.6;
+  text-shadow:0 2px 6px rgba(248, 242, 242, 0.25);
+}
+
 
 img{
   width:230px;
@@ -50,9 +60,15 @@ button{
   font-size:1rem;
   margin:10px;
   cursor:pointer;
+  
 }
 
-.yes{background:#ff3366;color:white}
+.yes{
+  background:#ff3366;
+  color:#fff;
+  box-shadow:0 6px 15px rgba(255,51,102,0.5);
+}
+
 .no{
   background:white;
   color:#ff3366;
@@ -115,7 +131,15 @@ Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
 <div class="slide">
   <h1>Will you be my Valentine? 💝</h1>
   <button class="yes" onclick="specialNext()">YES ❤️</button>
-  <button class="no" onmouseover="run(this)">NO 🙈</button>
+ <button class="no"
+  onmouseover="runAndTease(this)"
+  data-msg="NO? 😳 Itna asaan nhi hai pakadna? Pakdo pakdo Valentine to banna padega 😘❤️">
+NO 🙈
+</button>
+
+
+
+
 </div>
 
 <div class="slide">
@@ -132,7 +156,12 @@ Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
   <p>Tumhare saath har pal celebrate karna ab meri priority hai 😘</p><br>
   <p>To kya aap ready hai apne surprise ke liye?😄</p><br>
   <button class="yes" onclick="showNext()">YES</button>
-  <button class="no" onmouseover="run(this)">NO</button>
+  <button class="no"
+  onmouseover="runAndTease(this)"
+  data-msg="Surprise ke liye NO? 😭 Aisa zulm mat karo jaan 😝🎁">
+NO
+</button>
+
 </div>
 
 <!-- DAYS -->
@@ -145,7 +174,12 @@ Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
   </p><br>
   <p>Kya tum Next day ke liye ready ho?</p>
   <button class="yes" onclick="dayNext()">YES</button>
-  <button class="no" onmouseover="run(this)">NO</button>
+ <button class="no"
+  onmouseover="runAndTease(this)"
+  data-msg="Rose diya aur NO bhi? 🌹😂 Pakdo pakdo, phool wapas nahi lunga 😘">
+NO
+</button>
+
 </div>
 
 <div class="slide day">
@@ -154,7 +188,12 @@ Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
   <p>“Tum meri zindagi ka woh hissa ho jiske bina sab adhura lagta hai.</p>
   <p> Kya tum meri zindagi ka hamesha ka saath banogi? ❤️” 💕</p>
   <button class="yes" onclick="showNext()">YES</button>
-  <button class="no" onmouseover="run(this)">NO</button>
+  <button class="no"
+  onmouseover="runAndTease(this)"
+  data-msg="Itna cute proposal aur NO? 😭💍 Dil toot gaya… Pakdo pakdo 😝">
+NO
+</button>
+
 </div>
 
 <div class="slide">
@@ -171,7 +210,12 @@ Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
 
 <p>Kya tum Next day ke liye ready ho?</p><br>
   <button class="yes" onclick="dayNext()">YES</button>
-  <button class="no" onmouseover="run(this)">NO</button>
+   <button class="no"
+  onmouseover="runAndTease(this)"
+  data-msg="Arey arey 😝 abhi YES bola aur next day pe NO? Itni jaldi thak gaye kya 😘❤️">
+NO 🙈
+</button>
+
 </div>
 
 <div class="slide day">
@@ -183,7 +227,12 @@ Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
   </p><br>
   <p>kya tum Next day ke liye excited ho😄?</p><br>
   <button class="yes" onclick="dayNext()">YES</button>
-  <button class="no" onmouseover="run(this)">NO</button>
+   <button class="no"
+  onmouseover="runAndTease(this)"
+  data-msg="Chocolate ke saath NO free? 🍫😆 Pakdo pakdo sweetness accept karo 😘">
+NO
+</button>
+
 </div>
 
 <div class="slide day">
@@ -196,7 +245,12 @@ Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
     Happy Teddy Day meri cuttie teddy 😘🧸 ❤️</p><br>
   <p>Next day?</p>
   <button class="yes" onclick="dayNext()">YES</button>
-  <button class="no" onmouseover="run(this)">NO</button>
+   <button class="no"
+  onmouseover="runAndTease(this)"
+  data-msg="Teddy mana? 🧸🥺 Main khud teddy ban jaunga pakadne ke liye 😝">
+NO
+</button>
+
 </div>
 
 <div class="slide day">
@@ -208,7 +262,12 @@ Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
     Happy Promise Day, my jaan💖</p><br>
   <p>Next day?</p>
   <button class="yes" onclick="dayNext()">YES</button>
-  <button class="no" onmouseover="run(this)">NO</button>
+  <button class="no"
+  onmouseover="runAndTease(this)"
+  data-msg="Promise Day pe NO? 🤝😳 Ye cheating hai jaan 😂 Pakdo pakdo">
+NO
+</button>
+
 </div>
 
 <div class="slide day">
@@ -221,7 +280,12 @@ Hamesha mere saath, Aur mere dil me rehna.💖</p><br>
 
   <p>Next day?</p><br>
   <button class="yes" onclick="dayNext()">YES</button>
-  <button class="no" onmouseover="run(this)">NO</button>
+   <button class="no"
+  onmouseover="runAndTease(this)"
+  data-msg="Kiss ke liye NO? 💋😝  sharmao mat bus ek kiss ki hi to baat hai 😘">
+NO
+</button>
+
 </div>
 
 <div class="slide day">
@@ -234,7 +298,12 @@ Happy Hug Day, meri sukoon.”🤗🤗</p><br>
 
   <p>Ready ho meri jaan? Kyunki aage sirf tum ho… aur main ❤️</p><br>
   <button class="yes" onclick="dayNext()">YES</button>
-  <button class="no" onmouseover="run(this)">NO</button>
+   <button class="no"
+  onmouseover="runAndTease(this)"
+  data-msg="Hug mana? 🫂😭 Aisa dil todna allowed nahi hai 😝❤️">
+NO
+</button>
+
 </div>
 
 
@@ -262,6 +331,25 @@ function showNext(){
   index++;
   slides[index].classList.add('active');
 }
+
+
+function runAndTease(btn){
+  run(btn); // button bhaage (always)
+
+  // agar is button ka msg already dikh chuka hai → bas bhaagna
+  if(btn.dataset.shown === "true") return;
+
+  btn.dataset.shown = "true"; // lock lag gaya (sirf ek baar)
+
+  setTimeout(() => {
+    alert(btn.getAttribute("data-msg") || "Pakdo pakdo 😝💨");
+  }, 150);
+}
+
+
+
+
+
 function specialNext(){showNext();}
 function dayNext(){showNext();}
 function run(btn){
@@ -291,9 +379,15 @@ function createHeart(){
 setInterval(createHeart, 300);
 
 
+
+
+
+
 </script>
+
+
+
+
 
 </body>
 </html>
-
-
